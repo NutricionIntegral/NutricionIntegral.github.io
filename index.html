@@ -59,7 +59,7 @@
 					Nuestro sitio web <span class="m1-txt2">esta en construcción</span>, síguenos !
 				</p>
 
-				<form class="contact100-form validate-form" >
+				<form class="contact100-form validate-form" name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdpKSczCTF1wEJmRA06GTdjZl75bxb5lseL7kJ7JNTsa2QdnA/viewform?usp=sf_link" target="hidden_iframe" onsubmit="submitted=true;">
 					<div class="wrap-input100 m-b-10 validate-input" data-validate = "Name is required">
 						<input class="s2-txt1 placeholder0 input100" type="text" name="name" placeholder="Tu Nombre">
 						<span class="focus-input100"></span>
@@ -76,7 +76,8 @@
 						</button>
 					</div>
 				</form>
-
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+				
 				<p class="s2-txt3 p-t-18">
 					Y no te preocupes, tampoco nos gusta el spam! Te puedes salir de la subscripción cuando quieras.
 				</p>
@@ -98,7 +99,14 @@
 		</div>
 	</div>
 
-
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
 
 	
 
