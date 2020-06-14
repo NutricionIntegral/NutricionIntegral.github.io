@@ -98,7 +98,18 @@
 			</div>
 		</div>
 	</div>
+	
 
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">var submitted=false;</script>
+	<script type="text/javascript">
+		$('#gform').on('submit', function(e) {
+		$('#gform *').fadeOut(2000);
+		$('#gform').prepend('Your submission has been processed...');
+		});
+	</script>
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
